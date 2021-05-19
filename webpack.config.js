@@ -16,8 +16,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "md_week.js",
-    library: "md_week",
+    filename: "myfunc.js",
+    library: "myfunc",
     libraryTarget: "var",
   },
 };

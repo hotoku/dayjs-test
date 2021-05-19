@@ -16,6 +16,6 @@ WITH
   )
 SELECT
   year,
-  `md_week.md_week`(date(year, 3, 1))
+  `myfunc.myfunc`(date(year, 3, 1))
 FROM
   temp2;

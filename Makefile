@@ -1,4 +1,4 @@
-DATASET := md_week
+DATASET := myfunc
 LOCATION := asia-northeast1
 
 .PHONY: load
