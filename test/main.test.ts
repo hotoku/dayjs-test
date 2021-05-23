@@ -6,8 +6,8 @@ function adjust(date: Date): void {
 }
 
 describe("test", () => {
-  it("2000-03-01", () => {
-    const d = new Date(2000, 2, 1);
+  it("2000-03-02", () => {
+    const d = new Date(2000, 2, 2);
     adjust(d);
     const ret = main.myfunc(d);
     console.log(ret);
