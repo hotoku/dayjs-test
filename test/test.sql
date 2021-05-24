@@ -2,7 +2,7 @@
 WITH
   temp1 AS (
     SELECT
-      `dor-ds-sandbox.myfunc.myfunc`("2000-3-1") AS x
+      `myfunc.myfunc`("2000-3-1") AS x
   )
 SELECT
   x.offset,
