@@ -8,15 +8,23 @@ interface Ret {
   set2: string;
 }
 
+function adjust(dates: Array<Date>, offset: number, sign: 1 | -1): void {
+  dates.map((d) => {
+    d.setTime(d.getTime() + offset * 60 * 1000 * sign); // 分をミリ秒に変換している
+  });
+}
+
 export function myfunc(date: Date): Ret {
   const offset = date.getTimezoneOffset();
+  adjust([date], offset, 1);
   const orig = dayjs(date);
-  const set0 = orig.set("date", 0);
-  const set1 = orig.set("date", 1);
-  const set2 = orig.set("date", 2);
+  const set0 = orig.set("date", 0).toDate();
+  const set1 = orig.set("date", 1).toDate();
+  const set2 = orig.set("date", 2).toDate();
+  adjust([date, set0, set1, set2], offset, -1);
   return {
     offset: offset,
-    orig: orig.toISOString(),
+    orig: date.toISOString(),
     set0: set0.toISOString(),
     set1: set1.toISOString(),
     set2: set2.toISOString(),
