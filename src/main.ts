@@ -8,7 +8,7 @@ interface Ret {
   set2: string;
 }
 
-function adjust(dates: Array<Date>, offset: number, sign: 1 | -1): void {
+export function adjust(dates: Array<Date>, offset: number, sign: 1 | -1): void {
   dates.map((d) => {
     d.setTime(d.getTime() + offset * 60 * 1000 * sign); // 分をミリ秒に変換している
   });
