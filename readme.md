@@ -1,3 +1,3 @@
-# di-ds-udf
+# dayjs-test
 
-demand-insight関連プロジェクトで共通で使えるUDFを管理するレポジトリ
+BigQueryのUDFをTypeScriptで書くテスト
